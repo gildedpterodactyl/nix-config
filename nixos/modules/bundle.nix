@@ -12,6 +12,6 @@
     ./trim.nix
     ./bluetooth.nix
     ./nixvim/nixvim.nix
-    ./mysql.nix
+    # ./mysql.nix
   ];
 }

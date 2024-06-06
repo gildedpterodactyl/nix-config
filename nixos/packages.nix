@@ -6,26 +6,53 @@
 
   environment.systemPackages = with pkgs; [
     # Desktop apps
-    chromium
-    telegram-desktop
+    # chromium
+    # telegram-desktop
     alacritty
-    obs-studio
+    # obs-studio
     rofi
     wofi
     mpv
-    kdenlive
+    # kdenlive
     discord
     gparted
-    obsidian
-    zoom-us
+    # obsidian
+    # zoom-us
     pcmanfm-qt
+    spotify
+    discord
+    whatsapp-for-linux
+    firefox
+    gnome.nautilus
 
     # Coding stuff
     gnumake
     gcc
-    nodejs
-    python
+    gdb
+    nodejs_21
+    python3
     (python3.withPackages (ps: with ps; [ requests ]))
+    (vscode-with-extensions.override {
+    	vscodeExtensions = with vscode-extensions; [
+	    ms-python.python
+	    ms-vscode.cpptools
+	    vscode-icons-team.vscode-icons
+	    dbaeumer.vscode-eslint
+	    esbenp.prettier-vscode
+	    formulahendry.auto-rename-tag
+	    eamodio.gitlens
+	    github.copilot
+	    github.copilot-chat
+	    divyanshuagrawal.competitive-programming-helper
+	    cweijan.vscode-database-client2
+	    ms-vscode.cmake-tools
+	    ms-toolsai.vscode-jupyter-slideshow
+	    ms-toolsai.vscode-jupyter-cell-tags
+	    ms-toolsai.jupyter-renderers
+	    ms-toolsai.jupyter-keymap
+      bbenoist.nix
+	  ];
+	})
 
     # CLI utils
     neofetch
@@ -33,27 +60,28 @@
     tree
     wget
     git
-    fastfetch
+    # fastfetch
     htop
     nix-index
     unzip
     scrot
-    ffmpeg
+    # ffmpeg
     light
-    lux
+    # lux
     mediainfo
     ranger
-    zram-generator
+    # zram-generator
     cava
     zip
     ntfs3g
-    yt-dlp
+    # yt-dlp
     brightnessctl
     swww
     openssl
     lazygit
-    bluez
-    bluez-tools
+    # bluez
+    # bluez-tools
+    fzf
 
     # GUI utils
     feh
@@ -78,8 +106,11 @@
     hyprland
     seatd
     xdg-desktop-portal-hyprland
-    polybar
-    waybar
+    # polybar
+    # waybar
+    ags
+    swaylock
+    gvfs
 
     # Sound
     pipewire
@@ -97,6 +128,16 @@
     slurp
     flameshot
     swappy
+    
+    #Some essentials 
+    gnomeExtensions.vitals
+    gnome-browser-connector
+    efibootmgr
+    killall
+    socat
+    jq
+    zsh
+    kitty
 
     # Other
     home-manager
@@ -104,6 +145,7 @@
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     papirus-nord
+    glib
   ];
 
   fonts.packages = with pkgs; [

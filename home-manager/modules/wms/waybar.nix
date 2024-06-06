@@ -17,7 +17,6 @@
 
     "hyprland/language" = {
         format-en = "US";
-        format-ru = "RU";
 	      min-length = 5;
 	      tooltip = false;
     };

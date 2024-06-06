@@ -7,15 +7,16 @@
       "$mainMod" = "SUPER";
 
       monitor = ",preferred,auto,1";
-      monitor = "VGA-1,disable";
+      # monitor = "VGA-1,disable";
 
       env = [
         "XDG_CURRENT_DESKTOP,Hyprland"
         "XDG_SESSION_TYPE,wayland"
         "XDG_SESSION_DESKTOP,Hyprland"
-        # "XCURSOR_SIZE,36"
+        "XCURSOR_SIZE,36"
         "QT_QPA_PLATFORM,wayland"
         "XDG_SCREENSHOTS_DIR,~/screens" #def partition
+        /*
         "LIBVA_DRIVER_NAME,nvidia"
         "GBM_BACKEND,nvidia-drm"
         "__GLX_VENDOR_LIBRARY_NAME,nvidia"
@@ -27,6 +28,7 @@
         "HYPRLAND_NO_SD_NOTIFY=0"
         "WLR_RENDERER_ALLOW_SOFTWARE=1"
         "WLR_DRM_DEVICES,/dev/dri/card0:/dev/dri/card1"
+	*/
       ];
 
       debug = {
@@ -128,6 +130,7 @@
       exec-once = [
         "swww init"
         "swww img ~/Documents/background.png"
+        /*
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
         "dbus-update-activation-environment --systemd --all"
         "systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
@@ -136,9 +139,10 @@
         "~/.config/hypr/scripts/resetxdgportal.sh"
         "~/.config/hypr/scripts/batterynotify.sh"
         "~/.config/hypr/scripts/wallpaperdaemon.sh"
-        # "waybar"
-        # "wl-paste --type text --watch cliphist store"
-        # "wl-paste --type image --watch cliphist store"
+        */
+        "waybar"
+        "wl-paste --type text --watch cliphist store"
+        "wl-paste --type image --watch cliphist store"
       ];
 
       bind = [
