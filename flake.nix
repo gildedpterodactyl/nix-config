@@ -15,6 +15,11 @@
       url = "github:nix-community/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    ags = {
+      url = "github:Aylur/ags";
+    };
+
   };
 
   outputs = { self, nixpkgs, nixpkgs-stable, home-manager, ... }@inputs:
@@ -40,6 +45,7 @@
 
     homeConfigurations.rohitj = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.${system};
+      extraSpecialArgs = { inherit inputs; };
       modules = [ ./home-manager/home.nix ];
     };
   };

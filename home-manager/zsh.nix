@@ -22,7 +22,7 @@
       ll = "ls -l";
       v = "nvim";
       se = "sudoedit";
-      ff = "fastfetch";
+      nf = "neofetch";
     };
 
     history.size = 10000;
