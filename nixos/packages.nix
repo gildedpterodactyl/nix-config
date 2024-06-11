@@ -12,6 +12,7 @@
     # obs-studio
     rofi
     wofi
+    upower
     mpv
     # kdenlive
     discord
@@ -24,6 +25,7 @@
     whatsapp-for-linux
     firefox
     gnome.nautilus
+    nedit
 
     # Coding stuff
     gnumake
@@ -100,6 +102,7 @@
     xwayland
     wl-clipboard
     cliphist
+    wlogout
 
     # WMs and stuff
     herbstluftwm
@@ -109,8 +112,11 @@
     # polybar
     # waybar
     ags
-    swaylock
+    hyprlock
+    # siwaylock
+    hypridle
     gvfs
+    gtk4
 
     # Sound
     pipewire
@@ -118,7 +124,7 @@
     pamixer
 
     # GPU stuff 
-    amdvlk
+    # amdvlk
     rocm-opencl-icd
     glaxnimate
 
