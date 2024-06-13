@@ -13,6 +13,7 @@
     ./bluetooth.nix
     ./nixvim/nixvim.nix
     ./upower.nix
+    ./gvfs.nix
     # ./mysql.nix
   ];
 }
